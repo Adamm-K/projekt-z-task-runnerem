@@ -1,0 +1,457 @@
+/* Variables */
+$color-one: #0097e6;
+$color-two: #33d9b2;
+$color-three: #ff5252;
+
+$text-color-one: #fff;
+$text-color-two: #000;
+
+$font-text: 'Josefin Sans', sans-serif;
+$font-header: 'Open Sans', sans-serif;
+
+$transition: all 1s;
+
+/* Global */
+
+*, *::before, *::after {
+        box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: $text-color-two;
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: $font-text
+}
+
+.container {
+    max-width: 1140px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+/* Navigation */
+
+.navigation {
+    background-color: $color-one;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.navigation ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.navigation li {
+    display: inline-block;
+    margin-right: 36px;
+    position: relative;
+}
+.navigation a {
+    text-decoration: none;
+    color: $color-three;
+}
+
+.navigation a:hover {
+    color: $color-two;
+}
+
+.navigation ul ul li {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.navigation ul ul {
+    display: none;
+    position: absolute;
+    background: #ffffff;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 12px;
+}
+
+.navigation li:hover ul {
+    display: block;
+    text-align: center;
+}
+
+.navigation ul ul a:hover {
+    font: $color-one;
+    color: $color-two;
+    display: block;
+    padding: 0 24px;
+}
+
+.navigation ul a:hover {
+    display: inline-block;
+}
+
+/* Splash */
+
+.splash {
+    background-color: $color-one;
+    color: $color-two;
+    min-height: 500px;
+    display: flex;
+}
+
+.splash-inner {
+    margin: 24px auto;
+    max-width: 70%;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.page-title {
+    margin: 0;
+    font-size: 72px;
+    word-spacing: -24px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.page-subtitle {
+    margin: 24px 0;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.page-title span {
+     font-weight: bold;
+     font-size: 15px;
+}
+
+.btn {
+    display: inline-block;
+    min-width: 160px;
+    margin: 24px auto 0 auto;
+    padding: 16px;
+    border-radius: 5px;
+    font-family: $font-text;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-width: 2px;
+    border-style: solid;
+    transition: $transition;
+}
+
+.btn-one {
+    border-color: #ffffff;
+    color: #ffffff;
+    background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%);
+    background-position: 100% 0;
+    background-size: 300%;   
+}
+
+.btn:hover {
+    background-position: 0 100%;
+    color: #ffffff;
+}
+
+.btn-one:hover {
+    color: red;
+}
+
+/* Our Service */
+
+.service-parentofserviceboxes, .ourwork-parentofworkboxes, .contactflex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    
+}
+.services .box {
+    flex: 0 0 33.333%;
+    position: relative;
+    z-index: 2;
+    
+}
+
+.services .number {
+    position: absolute;
+    bottom: 100px;
+    left: 0px;
+    font-size: 144px;
+    line-height: 1;
+    z-index: -1;
+    color: green;
+}
+
+.box:first-of-type {
+    font-weight: bold;
+}
+
+.btn-two {
+    border-color: #FF0000;
+    color: #F08080;
+    background-image: linear-gradient(90deg, #A85959 50%, transparent 50%);
+    background-position: 100% 0;
+    background-size: 300%;   
+}
+
+.btn-three {
+    border-color: green;
+    color: green;
+    background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%);
+    background-position: 100% 0;
+    background-size: 300%;   
+}
+
+.btn-four {
+    border-color: orange;
+    color: orange;
+    background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%);
+    background-position: 100% 0;
+    background-size: 300%;   
+}
+
+.btn-two:hover {
+    color: green;
+}
+
+.btn-three:hover {
+    color: yellow;
+}
+
+.btn-four:hover {
+    color: blue;
+}
+
+.service-maintitle {
+    font-size: 48px;
+    margin: 0 0 72px 0;
+}
+
+
+.service-title {
+    font-size: 24px;
+    margin: 0 0 12px 0;
+}
+
+/* Our work */
+    
+
+.workbox {
+    flex: 0 0 50%;
+}
+
+[class^="skill-"] {
+    position: relative;
+}
+
+.skill-image {
+    position: absolute;
+    max-width: 250px;
+    z-index: 1;
+    
+}
+
+.skill-image:after {
+    position: absolute;
+    content: '';
+    opacity: 0.5;
+    top: 20px;
+    left: 20px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+
+.skill-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .2s;
+}
+
+.skill-image img:hover {
+    transform: scale(1.2);
+}
+
+.skill-right .skill-image {
+    right: 0;
+}
+
+.skill-right .skill-description {
+    padding: 36px 55% 36px 0;
+    text-align: right;
+}
+
+.skill-left .skill-description {
+    padding: 36px 0 36px 55%;
+    text-align: left;
+}
+    
+.skill-left {
+    flex: 0 0 50%;
+    min-height: 300px;
+    width: 96px;
+}
+
+p:last-of-type {
+    font-weight: bold;
+    }
+    
+.btn-five {
+    border: none;
+    margin: 36px 0;
+    padding: 0;
+    text-align: left;
+}
+
+.services, .skills {
+    background-color: #ffffff;
+}
+
+/* Contact */
+
+.contact {
+    background-color: $color-one;
+}
+
+form {
+    
+    display: block;
+    width: 100%;
+    
+}
+
+.form {
+    margin-right: 96px;
+    display: block;
+    flex: 2 0 0;
+    
+}
+
+.data {
+    flex: 1 0 0;
+    margin-top: 20px;
+    line-height: 10px;
+    
+}
+
+.data h2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.data p {
+    font-weight: 300;
+}
+
+.data div {
+    margin: 30px auto;
+}
+
+.contactflex {
+    display: flex;
+    color: #ffffff;
+}
+
+input {
+    display: block;
+    background: $color-one;
+    color: white;
+    border: none;
+    border-bottom-color: #ffffff;
+    outline: none;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    padding-top: 30px;
+}
+
+.message {
+    padding-top: 100px;
+    }
+
+
+.btn-six {
+    border-color: #ffffff;
+    color: #ffffff;
+    background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%);
+    background-position: 100% 0;
+    background-size: 300%;  
+}
+
+.forminsert {
+    width: 100%;
+    border-bottom-width: 1px solid #ffffff;
+}
+
+.form h1 {
+    margin: 1px auto 50px auto;
+    font-size: 40px;
+    font-weight: 400;
+}
+    
+/* footer */
+
+
+.footer {
+    margin: 48px auto;
+    background: #ffffff;
+    text-align: center;   
+}
+
+.socials i {
+    height: 60px;
+    width: 60px;
+    font-size: 30px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    cursor: pointer;
+    background: #e83f21;
+    line-height: 58px;
+    text-align: center;
+    color: $text-color-one;    
+}
+
+/* Media */
+
+@media (max-width: 767px) {
+    
+.service-parentofserviceboxes, .ourwork-parentofworkboxes, .contactflex {
+    flex-direction: column;
+}
+
+.skill-left {
+    position: relative;
+    height: 150px;
+    flex: 0 0 100%;
+    min-height: 300px;
+    width: 100%;
+}
+
+.data {
+    margin-top: 50px;
+}
+
+section {
+    padding: 10px;
+}
+
+.skill-image {
+    position: static;
+    max-width: 250px;
+    z-index: 1;
+    
+}
+
+.skill-description {
+    padding: none;
+}
+
+
+}
